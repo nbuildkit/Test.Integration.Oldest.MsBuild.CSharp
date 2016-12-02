@@ -31,7 +31,7 @@
         will be used.
     -->
     <ItemGroup>
-        <NuGetSources Include="${LocalNuGetRepository}" />
+        <NuGetSources Include="$(LocalNuGetRepository)" />
         <NuGetSources Include="https://www.nuget.org/api/v2/" />
     </ItemGroup>
 
