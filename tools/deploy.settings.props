@@ -358,7 +358,6 @@
             </PostSteps>
         </DeployStepsToExecute>
         -->
-        <!--
         <DeployStepsToExecute Include="$(DeployStepsPushToGitRepository)">
             <Properties>
                 Configuration=$(ProductionConfiguration);
@@ -373,7 +372,6 @@
             <PostSteps>
             </PostSteps>
         </DeployStepsToExecute>
-        -->
     </ItemGroup>
 
     <!--
@@ -563,13 +561,11 @@
         All properties allow the use of build templates, e.g. $(DirBuildDeploy)\myarchive-${VersionSemantic}.zip
     -->
     <ItemGroup Condition=" '@(PushToGitRepositorySpecs)' == '' ">
-        <!--
         <PushToGitRepositorySpecs
             Condition=" '$(DirBuildDeploy)' != '' "
-            Include="$(DirBuildDeploy)\myarchive-${VersionSemantic}.zip">
+            Include="$(DirBuildDeploy)\gitmerge-${ProductNameInFilePath}-${GitBranch}.zip">
              <Repository>$(GitRemoteRepository)</Repository>
         </PushToGitRepositorySpecs>
-        -->
     </ItemGroup>
 
 
